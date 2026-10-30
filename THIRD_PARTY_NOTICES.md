@@ -71,3 +71,57 @@ External Python packages retain their own licenses.
 The presence of an upstream Apache-2.0 LICENSE does not
 automatically apply that license to every dependency
 or learned policy.
+
+## Source provenance comparison
+
+The Python training package was compared against the
+local `microduck_rl` upstream source snapshot.
+This comparison is based on relative paths and SHA-256
+hashes, not on a legal authorship determination.
+
+- Byte-identical upstream Python files: 24
+- Different files at matching upstream paths: 2
+- Python files without matching upstream relative paths: 10
+- Navigation Python files separately developed or adapted: 29
+
+### Files differing from corresponding upstream files
+
+- `microduck_turn_training/src/mjlab_microduck/hf_jobs.py`
+- `microduck_turn_training/src/mjlab_microduck/tasks/__init__.py`
+
+These files differ from the local upstream snapshot.
+The original upstream license and attribution obligations
+must be preserved for any upstream-derived portions.
+
+### Additional turn-PPO files
+
+- `microduck_turn_training/src/mjlab_microduck/turn_ppo/__init__.py`
+- `microduck_turn_training/src/mjlab_microduck/turn_ppo/microduck_turn_env_cfg.py`
+- `microduck_turn_training/src/mjlab_microduck/turn_ppo/microduck_turn_train_env_cfg.py`
+- `microduck_turn_training/src/mjlab_microduck/turn_ppo/microduck_turn_train_env_cfg_v2.py`
+- `microduck_turn_training/src/mjlab_microduck/turn_ppo/microduck_turn_train_env_cfg_v3.py`
+- `microduck_turn_training/src/mjlab_microduck/turn_ppo/register_transfer_v3_task.py`
+- `microduck_turn_training/src/mjlab_microduck/turn_ppo/register_turn_task.py`
+- `microduck_turn_training/src/mjlab_microduck/turn_ppo/train_transfer_ppo_v3.py`
+- `microduck_turn_training/src/mjlab_microduck/turn_ppo/transfer_runner.py`
+- `microduck_turn_training/src/mjlab_microduck/turn_ppo/turn_v3_rewards.py`
+
+These files have no same-path counterpart in the local
+upstream snapshot. This does not by itself prove that
+all their contents are independently authored.
+
+### Navigation files
+
+The 29 files under `navigation/` have no byte-identical
+counterpart among the scanned upstream Python files.
+Some navigation code may adapt upstream architecture,
+APIs, or implementations. A hash comparison alone does
+not establish ownership of every contribution.
+
+### Licensing scope
+
+The Apache-2.0 notice retained for upstream code and
+the CC BY-NC-SA 4.0 notice retained for STL meshes
+remain applicable to the respective upstream materials.
+This provenance note does not relicense third-party
+material or grant a new license for independent additions.
