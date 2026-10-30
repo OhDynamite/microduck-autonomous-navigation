@@ -1,0 +1,26 @@
+# Private / unpublished material
+DO_NOT_PUBLISH_YET.txt
+*.onnx
+
+# Python and development environments
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local outputs and recordings
+*.log
+*.csv
+*.pkl
+*.pickle
+*.mp4
+*.mov
+.DS_Store
+
+# Training artifacts
+checkpoints/
+runs/
+wandb/

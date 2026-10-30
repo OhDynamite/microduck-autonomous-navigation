@@ -1,0 +1,34 @@
+{
+  "scenario_id": "scenario_a",
+  "description": "Obstacle moved from y=0.25 to y=0.00",
+  "start": {
+    "x": 0.0,
+    "y": 0.0
+  },
+  "goal": {
+    "x": 1.0,
+    "y": 0.5
+  },
+  "obstacles": [
+    {
+      "name": "obstacle_1",
+      "x": 0.5,
+      "y": 0.0,
+      "z": 0.15,
+      "width": 0.2,
+      "depth": 0.2,
+      "height": 0.3
+    }
+  ],
+  "planner": {
+    "resolution": 0.05,
+    "margin": 0.15
+  },
+  "navigation": {
+    "goal_tolerance": 0.1,
+    "timeout": 80.0
+  },
+  "phase4": {
+    "initial_obstacles_known": false
+  }
+}
