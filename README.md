@@ -1,5 +1,36 @@
 # MicroDuck Autonomous Navigation — Final Project
 
+## PPO V3 Model Availability and Reproducibility
+
+**The trained PPO V3 turning model (`model_99.onnx`) is not included in this repository.**
+
+The model was developed through additional training based on an existing
+policy checkpoint. Redistribution conditions for the pretrained weights
+are being clarified with Pollen Robotics:
+
+https://github.com/pollen-robotics/microduck_rl/issues/88
+
+If redistribution is confirmed to be permitted, the validated PPO V3
+model is intended to be provided through a future GitHub Release,
+subject to applicable license conditions.
+
+In the meantime:
+
+- Download the verified official walking and standing policies using
+  `python3 scripts/setup_official_models.py`.
+- Refer to `microduck_turn_training/` for PPO training code and configuration.
+- Refer to `MODEL_SETUP.md` for the expected PPO V3 model path,
+  interface, and SHA-256.
+- Reproduction of the exact PPO V3 model from the published training
+  materials alone has not been verified.
+- A fresh clone cannot fully reproduce the validated PPO V3 navigation
+  run until the required model is available.
+
+The validated Scenario A run reached the goal without obstacle contact.
+Automatic forward resumption after the STOPPED state was not demonstrated.
+
+
+
 An educational MicroDuck autonomous-navigation project
 developed and evaluated in MuJoCo.
 
