@@ -1,6 +1,32 @@
 # Simulation validation
 
-## Verified run
+## Final project validation (submitted report)
+
+The submitted final-project experiment followed START,
+WP1 (0.10, 0.50 m), and WP2 (0.95, 1.00 m).
+
+| Evaluation item | Final reported result |
+| --- | --- |
+| WP2 / GOAL | Reached in 3 of 3 runs |
+| Final goal distance | Approximately 0.098 m |
+| Obstacle contacts | 0 in each run |
+| Initial obstacle detection and stopping | Completed |
+| Initial A* replanning | Applied to navigation |
+| PPO V3 turning and walking resumption | Completed |
+| Later additional A* candidate | Generated and evaluated, not applied |
+
+Source: submitted final-project report, sections 4, 6, and 8.
+
+This is the later submitted integrated experiment, not the
+separate Scenario A release-candidate test below.
+The result does not establish safety for all obstacle layouts
+or real-hardware operation.
+
+The exact correspondence between the final submitted
+experiment and the GitHub release source files has not
+been independently verified.
+
+## Separate Scenario A verified run
 
 - Test: Scenario A, GitHub release candidate
 - Entry point: `navigation/autonomous_navigation.py`

@@ -1,5 +1,31 @@
 # MicroDuck Autonomous Navigation — Final Project
 
+## Final project result (submitted simulation)
+
+The final integrated simulation combined obstacle detection,
+safe stopping, initial A* route replanning, PPO V3 turning,
+and walking-policy control.
+
+After the initial replanning and turning sequence, the robot
+resumed walking, reached WP1 (0.10, 0.50 m), and continued
+to WP2 (0.95, 1.00 m), shown as GOAL in the submission video.
+
+**WP2 was reached in 3 of 3 runs under the same conditions.**
+The final goal distance was approximately 0.098 m, with
+zero recorded obstacle contacts in each run.
+
+During the route, another obstacle was detected and an
+additional A* candidate was generated and evaluated.
+That later candidate was not applied to the executed route.
+
+These results are from the submitted final-project report.
+They are distinct from the earlier Scenario A release-candidate
+test documented below.
+
+Robustness to different obstacle configurations, deployment
+on physical hardware, and clean-clone reproducibility
+have not been established.
+
 ## PPO V3 Model Availability and Reproducibility
 
 **The trained PPO V3 turning model (`model_99.onnx`) is not included in this repository.**
@@ -26,8 +52,10 @@ In the meantime:
 - A fresh clone cannot fully reproduce the validated PPO V3 navigation
   run until the required model is available.
 
-The validated Scenario A run reached the goal without obstacle contact.
-Automatic forward resumption after the STOPPED state was not demonstrated.
+A separate Scenario A release-candidate run reached the goal
+without obstacle contact, but did not independently establish
+automatic resumption after the STOPPED state.
+The later submitted final-project results are described above.
 
 
 
@@ -55,7 +83,7 @@ physical MicroDuck robot. It is not a commercial product.
   configuration, and MuJoCo assets
 - `VALIDATION.md` — measured results and limitations
 
-## Verified result
+## Separate Scenario A release-candidate result
 
 In a single Scenario A headless simulation, the release
 candidate reached the goal with a final goal distance of
